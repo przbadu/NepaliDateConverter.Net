@@ -3,12 +3,12 @@ namespace NepaliDateConverter
 {
     public interface ICalendar
     {
-		/// <summary>
+        /// <summary>
         /// Returns week days; Sunday, Monday, ... , Saturday. 
         /// It expects index range from 1 through 7
-		/// </summary>
-		/// <param name="index">Index.</param>
-		string GetDayOfWeek(int index);
+        /// </summary>
+        /// <param name="index">Index.</param>
+        string GetDayOfWeek(int index);
 
         /// <summary>
         /// This function returns English Months like January, February,..,December.
@@ -17,12 +17,12 @@ namespace NepaliDateConverter
         /// <param name="index">Index.</param>
         string GetEnglishMonth(int index);
 
-		/// <summary>
-		/// This function returns Nepali Months like Baishakh, Jesth,..,Chaitra.
-		/// It expects index range from 1 through 12
-		/// </summary>
-		/// <param name="index">Index.</param>
-		string GetNepaliMonth(int index);
+        /// <summary>
+        /// This function returns Nepali Months like Baishakh, Jesth,..,Chaitra.
+        /// It expects index range from 1 through 12
+        /// </summary>
+        /// <param name="index">Index.</param>
+        string GetNepaliMonth(int index);
 
         /// <summary>
         /// Will check if given year, month and day are in valid english date range
