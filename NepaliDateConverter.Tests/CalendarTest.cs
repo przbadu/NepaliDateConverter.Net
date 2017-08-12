@@ -129,5 +129,37 @@ namespace NepaliDateConverter.Tests
             Assert.IsFalse(calendar.ValidEnglishDate(1943, 11, 33));
             Assert.IsFalse(calendar.ValidEnglishDate(2034, 1, 1));
         }
+
+        // ValidNepaliDate()
+        [Test]
+        public void TestValidNepaliDateShouldReturnTrue()
+        {
+            // Valid years
+            for (int year = 2000; year <= 2089; year++)
+            {
+                Assert.IsTrue(calendar.ValidNepaliDate(year, 1, 1));
+            }
+
+            // valid months
+            for (int month = 1; month <= 12; month++)
+            {
+                Assert.IsTrue(calendar.ValidNepaliDate(2074, month, 1));
+            }
+
+            // valid days
+            for (int day = 1; day <= 32; day++)
+            {
+                Assert.IsTrue(calendar.ValidNepaliDate(2074, 8, day));
+            }
+        }
+
+        [Test]
+        public void TestValidNepaliDateShouldBeInvalid()
+        {
+            Assert.IsFalse(calendar.ValidNepaliDate(1999, 1, 1));
+            Assert.IsFalse(calendar.ValidNepaliDate(2090, 1, 1));
+            Assert.IsFalse(calendar.ValidNepaliDate(2074, 1, 33));
+            Assert.IsFalse(calendar.ValidNepaliDate(2090, 13, 1));
+        }
     }
 }

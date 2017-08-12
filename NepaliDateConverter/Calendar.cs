@@ -70,7 +70,25 @@ namespace NepaliDateConverter
 
         public bool ValidNepaliDate(int year, int month, int day)
         {
-            throw new NotImplementedException();
+            if (year < 2000 || year > 2089)
+            {
+                Debug.WriteLine("Year should be between 1944 - 2033");
+                return false;
+            }
+
+            if (month < 1 || month > 12)
+            {
+                Debug.WriteLine("Month should be between 1 - 12");
+                return false;
+            }
+
+            if (day < 1 || day > 32)
+            {
+                Debug.WriteLine("Day should be between 1 - 31");
+                return false;
+            }
+
+            return true;
         }
 
         private void SetWeekNames()
