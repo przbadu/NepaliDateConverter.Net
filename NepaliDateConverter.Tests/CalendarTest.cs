@@ -48,44 +48,54 @@ namespace NepaliDateConverter.Tests
 
         // GetDayOfWeek()
         [Test]
-        public void TestGetDayOfWeekShouldReturnDefaultValue()
+        public void TestGetDayOfWeekShouldReturnDayOfWeek()
         {
-            Assert.AreEqual("", calendar.GetDayOfWeek(9));
-        }
-
-        public void TestGetDayOfWeekShouldReturnSunday()
-        {
+            Assert.AreEqual("Sunday", calendar.GetDayOfWeek(0));
             Assert.AreEqual("Sunday", calendar.GetDayOfWeek(1));
-        }
-
-        public void TestGetDayOfWeekShouldReturnMonday()
-        {
             Assert.AreEqual("Monday", calendar.GetDayOfWeek(2));
-        }
-
-        public void TestGetDayOfWeekShouldReturnTuesday()
-        {
-            Assert.AreEqual("Tuesday", calendar.GetDayOfWeek(2));
-        }
-
-        public void TestGetDayOfWeekShouldReturnWednesday()
-        {
+            Assert.AreEqual("Tuesday", calendar.GetDayOfWeek(3));
             Assert.AreEqual("Wednesday", calendar.GetDayOfWeek(4));
-        }
-
-        public void TestGetDayOfWeekshouldReturnThursday()
-        {
             Assert.AreEqual("Thursday", calendar.GetDayOfWeek(5));
-        }
-
-        public void TestGetDayOfWeekShouldReturnFriday()
-        {
-            Assert.AreEqual("Friday", calendar.GetDayOfWeek(7));
-        }
-
-        public void TestGetDayOfWeekShouldReturnSaturday()
-        {
+            Assert.AreEqual("Friday", calendar.GetDayOfWeek(6));
             Assert.AreEqual("Saturday", calendar.GetDayOfWeek(7));
+        }
+
+        // GetEnglishMonth()
+        [Test]
+        public void TestGetEnglishMonthShouldReturnEnglishMonthName()
+        {
+            Assert.AreEqual("January", calendar.GetEnglishMonth(0));
+            Assert.AreEqual("January", calendar.GetEnglishMonth(1));
+            Assert.AreEqual("February", calendar.GetEnglishMonth(2));
+            Assert.AreEqual("March", calendar.GetEnglishMonth(3));
+            Assert.AreEqual("April", calendar.GetEnglishMonth(4));
+            Assert.AreEqual("May", calendar.GetEnglishMonth(5));
+            Assert.AreEqual("June", calendar.GetEnglishMonth(6));
+            Assert.AreEqual("July", calendar.GetEnglishMonth(7));
+            Assert.AreEqual("August", calendar.GetEnglishMonth(8));
+            Assert.AreEqual("September", calendar.GetEnglishMonth(9));
+            Assert.AreEqual("October", calendar.GetEnglishMonth(10));
+            Assert.AreEqual("November", calendar.GetEnglishMonth(11));
+            Assert.AreEqual("December", calendar.GetEnglishMonth(12));
+        }
+
+        // GetNepaliMonth()
+        [Test]
+        public void TestGetNepaliMonthShouldReturnNepaliMonthName()
+        {
+            Assert.AreEqual("Baishakh", calendar.GetNepaliMonth(0));
+            Assert.AreEqual("Baishakh", calendar.GetNepaliMonth(1));
+            Assert.AreEqual("Jestha", calendar.GetNepaliMonth(2));
+            Assert.AreEqual("Ashad", calendar.GetNepaliMonth(3));
+            Assert.AreEqual("Shrawan", calendar.GetNepaliMonth(4));
+            Assert.AreEqual("Bhadra", calendar.GetNepaliMonth(5));
+            Assert.AreEqual("Aswin", calendar.GetNepaliMonth(6));
+            Assert.AreEqual("Kartik", calendar.GetNepaliMonth(7));
+            Assert.AreSame("Mangshir", calendar.GetNepaliMonth(8));
+            Assert.AreEqual("Poush", calendar.GetNepaliMonth(9));
+            Assert.AreEqual("Magh", calendar.GetNepaliMonth(10));
+            Assert.AreEqual("Falgun", calendar.GetNepaliMonth(11));
+            Assert.AreEqual("Chaitra", calendar.GetNepaliMonth(12));
         }
     }
 }
