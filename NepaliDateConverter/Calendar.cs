@@ -3,19 +3,17 @@ namespace NepaliDateConverter
 {
     public class Calendar : ICalendar
     {
-        public Calendar() { }
-
-        public string GetDayOfWeek(int index)
+        public string GetDayOfWeek(int day)
         {
             throw new NotImplementedException();
         }
 
-        public string GetEnglishMonth(int index)
+        public string GetEnglishMonth(int month)
         {
             throw new NotImplementedException();
         }
 
-        public string GetNepaliMonth(int index)
+        public string GetNepaliMonth(int month)
         {
             throw new NotImplementedException();
         }
