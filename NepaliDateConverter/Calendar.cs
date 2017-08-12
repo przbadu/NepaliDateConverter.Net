@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 
 namespace NepaliDateConverter
@@ -46,7 +47,25 @@ namespace NepaliDateConverter
 
         public bool ValidEnglishDate(int year, int month, int day)
         {
-            throw new NotImplementedException();
+            if (year < 1944 || year > 2033)
+            {
+                Debug.WriteLine("Year should be between 1944 - 2033");
+                return false;
+            }
+
+            if (month < 1 || month > 12)
+            {
+                Debug.WriteLine("Month should be between 1 - 12");
+                return false;
+            }
+
+            if (day < 1 || day > 31)
+            {
+                Debug.WriteLine("Day should be between 1 - 31");
+                return false;
+            }
+
+            return true;
         }
 
         public bool ValidNepaliDate(int year, int month, int day)

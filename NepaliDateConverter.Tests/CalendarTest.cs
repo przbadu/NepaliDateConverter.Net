@@ -97,5 +97,26 @@ namespace NepaliDateConverter.Tests
             Assert.AreEqual("Falgun", calendar.GetNepaliMonth(11));
             Assert.AreEqual("Chaitra", calendar.GetNepaliMonth(12));
         }
+
+        // ValidEnglishDate()
+        [Test]
+        public void TestValidEnglishDateShouldReturnTrue()
+        {
+            // Valid year
+            for (int year = 1944; year <= 2033; year++)
+            {
+                Assert.IsTrue(calendar.ValidEnglishDate(year, 1, 1));
+            }
+
+            for (int month = 1; month <= 12; month++)
+            {
+                Assert.IsTrue(calendar.ValidEnglishDate(2017, month, 1));
+            }
+
+            for (int day = 1; day <= 31; day++)
+            {
+                Assert.IsTrue(calendar.ValidEnglishDate(2017, 8, day));
+            }
+        }
     }
 }
