@@ -19,6 +19,7 @@ namespace NepaliDateConverter.Tests
             calendar = null;
         }
 
+        // IsLeapYear()
         [Test()]
         public void TestIsLeapYearShouldReturnTrue()
         {
@@ -43,6 +44,48 @@ namespace NepaliDateConverter.Tests
             Assert.IsFalse(isLeapYear2017);
             Assert.IsFalse(isLeapYear2018);
             Assert.IsFalse(isLeapYear2025);
+        }
+
+        // GetDayOfWeek()
+        [Test]
+        public void TestGetDayOfWeekShouldReturnDefaultValue()
+        {
+            Assert.AreEqual("", calendar.GetDayOfWeek(9));
+        }
+
+        public void TestGetDayOfWeekShouldReturnSunday()
+        {
+            Assert.AreEqual("Sunday", calendar.GetDayOfWeek(1));
+        }
+
+        public void TestGetDayOfWeekShouldReturnMonday()
+        {
+            Assert.AreEqual("Monday", calendar.GetDayOfWeek(2));
+        }
+
+        public void TestGetDayOfWeekShouldReturnTuesday()
+        {
+            Assert.AreEqual("Tuesday", calendar.GetDayOfWeek(2));
+        }
+
+        public void TestGetDayOfWeekShouldReturnWednesday()
+        {
+            Assert.AreEqual("Wednesday", calendar.GetDayOfWeek(4));
+        }
+
+        public void TestGetDayOfWeekshouldReturnThursday()
+        {
+            Assert.AreEqual("Thursday", calendar.GetDayOfWeek(5));
+        }
+
+        public void TestGetDayOfWeekShouldReturnFriday()
+        {
+            Assert.AreEqual("Friday", calendar.GetDayOfWeek(7));
+        }
+
+        public void TestGetDayOfWeekShouldReturnSaturday()
+        {
+            Assert.AreEqual("Saturday", calendar.GetDayOfWeek(7));
         }
     }
 }
