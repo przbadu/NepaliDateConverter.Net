@@ -102,21 +102,32 @@ namespace NepaliDateConverter.Tests
         [Test]
         public void TestValidEnglishDateShouldReturnTrue()
         {
-            // Valid year
+            // Valid years
             for (int year = 1944; year <= 2033; year++)
             {
                 Assert.IsTrue(calendar.ValidEnglishDate(year, 1, 1));
             }
 
+            // valid months
             for (int month = 1; month <= 12; month++)
             {
                 Assert.IsTrue(calendar.ValidEnglishDate(2017, month, 1));
             }
 
+            // valid days
             for (int day = 1; day <= 31; day++)
             {
                 Assert.IsTrue(calendar.ValidEnglishDate(2017, 8, day));
             }
+        }
+
+        [Test]
+        public void TestValidEnglishDateShouldBeInvalid()
+        {
+            Assert.IsFalse(calendar.ValidEnglishDate(1943, 1, 1));
+            Assert.IsFalse(calendar.ValidEnglishDate(2017, 13, 1));
+            Assert.IsFalse(calendar.ValidEnglishDate(1943, 11, 33));
+            Assert.IsFalse(calendar.ValidEnglishDate(2034, 1, 1));
         }
     }
 }
