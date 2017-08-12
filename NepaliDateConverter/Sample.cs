@@ -1,6 +1,6 @@
 ﻿namespace NepaliDateConverter
 {
-    public class Sample
+    public class NepaliDate
     {
         public string Demo()
         {
