@@ -11,6 +11,13 @@ namespace NepaliDateConverter
         private IDictionary<int, string> NepaliMonthNames;
         private IDictionary<int, int[]> BSCalendar;
 
+        public int Year { get; set; }
+        public int Month { get; set; }
+        public int Day { get; set; }
+        public string WeekDayName { get; set; }
+        public string MonthName { get; set; }
+        public int WeekDay { get; set; }
+
         public Calendar()
         {
             SetWeekNames();

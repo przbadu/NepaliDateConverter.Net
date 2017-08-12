@@ -19,6 +19,48 @@ namespace NepaliDateConverter.Tests
             calendar = null;
         }
 
+        [Test()]
+        public void YearPropsTest()
+        {
+            calendar.Year = 2078;
+            Assert.AreEqual(2078, calendar.Year);
+        }
+
+        [Test]
+        public void MonthPropsTest()
+        {
+            calendar.Month = 2;
+            Assert.AreEqual(2, calendar.Month);
+        }
+
+        [Test]
+        public void DayPropsTest()
+        {
+            calendar.Day = 2;
+            Assert.AreEqual(2, calendar.Day);
+        }
+
+        [Test]
+        public void WeekDayNamePropsTest()
+        {
+            calendar.WeekDayName = "Sunday";
+            Assert.AreEqual("Sunday", calendar.WeekDayName);
+        }
+
+        [Test]
+        public void MonthNamePropsTest()
+        {
+            calendar.MonthName = "January";
+            Assert.AreEqual("January", calendar.MonthName);
+        }
+
+        [Test]
+        public void WeekDayPropsTest()
+        {
+            calendar.WeekDay = 1;
+            Assert.AreEqual(1, calendar.WeekDay);
+        }
+
         // IsLeapYear()
         [Test()]
         public void TestIsLeapYearShouldReturnTrue()
