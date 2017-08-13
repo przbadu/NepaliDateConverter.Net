@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/przbadu/NepaliDateConverterCS.svg?branch=master)](https://travis-ci.org/przbadu/NepaliDateConverterCS.svg?branch=master)
+[![NuGet](https://img.shields.io/nuget/v/NepaliDateConverter.Net.svg)](https://www.nuget.org/packages/NepaliDateconverter.Net)
 # NepaliDateConverterCS
 
 C# Class library for nepali date converter, with NUnit testing framework
