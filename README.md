@@ -5,8 +5,17 @@ C# Class library for nepali date converter, with NUnit testing framework
 
 ## Installation
 
-Download TODO: [DLL]() file and add reference to your project.
-Or You can install [https://www.nuget.org/packages/NepaliDateConverter.Net](https://www.nuget.org/packages/NepaliDateConverter.Net) package manger.
+### Option 1
+
+Download [Latest Release](https://github.com/przbadu/NepaliDateConverterCS/releases) extract zip file and include `NepaliDateConverter.dll` file to your project reference.
+
+### Option 2
+
+You can install [https://www.nuget.org/packages/NepaliDateConverter.Net](https://www.nuget.org/packages/NepaliDateConverter.Net)package using Nuget package manger.
+
+```sh
+Install-Package NepaliDateConverter.Net
+```
 
 ## Usage
 
