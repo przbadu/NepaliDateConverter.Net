@@ -9,7 +9,7 @@ namespace NepaliDateConverter
         private IDictionary<int, string> WeekNames;
         private IDictionary<int, string> EnglishMonthNames;
         private IDictionary<int, string> NepaliMonthNames;
-        private IDictionary<int, int[]> BSCalendar;
+        public IDictionary<int, int[]> BSCalendar;
 
         public int Year { get; set; }
         public int Month { get; set; }
