@@ -1,0 +1,8 @@
+language: csharp
+solution: NepaliDateConverter.sln
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore NepaliDateConverter.sln
+after_script:
+  - nunit-console NepaliDateConverter.Tests/bin/Release/NepaliDateConverter.Tests.dll
