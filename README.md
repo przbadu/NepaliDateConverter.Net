@@ -1,10 +1,7 @@
 [![Build Status](https://travis-ci.org/przbadu/NepaliDateConverterCS.svg?branch=master)](https://travis-ci.org/przbadu/NepaliDateConverterCS.svg?branch=master)
-
 # NepaliDateConverterCS
 
 C# Class library for nepali date converter, with NUnit testing framework
-
-[Ruby Gem](https://github.com/przbadu/nepali_date_converter)
 
 ## Installation
 
@@ -59,6 +56,11 @@ Till now, we can only convert date from 2000 to 2033 B.S (nepali date).
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/NepaliDateConverterCS. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+# References
+
+* [Ruby Gem](https://github.com/przbadu/nepali_date_converter)
+* [C# Class Library](https://github.com/przbadu/NepaliDateConverterCS)
 
 
 ## License
