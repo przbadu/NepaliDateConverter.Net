@@ -7,18 +7,18 @@ namespace NepaliDateConverter
         /// Will convert given English Date to Nepali Date
         /// </summary>
         /// <returns>The to nepali.</returns>
-        /// <param name="year">2017</param>
-        /// <param name="month">12</param>
-        /// <param name="day">3</param>
-        Calendar ConvertToNepali(int year, int month, int day);
+        /// <param name="yy">2017</param>
+        /// <param name="mm">12</param>
+        /// <param name="dd">3</param>
+        Calendar ConvertToNepali(int yy, int mm, int dd);
 
         /// <summary>
         /// Will convert given Nepali Date to English Date
         /// </summary>
         /// <returns>The to english.</returns>
-        /// <param name="year">2074</param>
-        /// <param name="month">12</param>
-        /// <param name="day">1</param>
-        Calendar ConvertToEnglish(int year, int month, int day);
+        /// <param name="yy">2074</param>
+        /// <param name="mm">12</param>
+        /// <param name="dd">1</param>
+        Calendar ConvertToEnglish(int yy, int mm, int dd);
     }
 }

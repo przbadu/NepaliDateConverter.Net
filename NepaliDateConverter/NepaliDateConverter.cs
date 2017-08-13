@@ -3,11 +3,11 @@ namespace NepaliDateConverter
 {
     public class NepaliDateConverter : INepaliDateConverter
     {
-        public Calendar calendar;
-
         public Calendar ConvertToNepali(int yy, int mm, int dd)
         {
-            if (calendar.ValidNepaliDate(yy, mm, dd))
+            Calendar calendar = new Calendar();
+
+            if (calendar.ValidEnglishDate(yy, mm, dd))
             {
                 // english months
                 int[] month = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
@@ -30,39 +30,40 @@ namespace NepaliDateConverter
                 int j = 0;
                 int numDay = 0;
 
-                for (int k = 0; k < yy - def_eyy; k++)
+                for (i = 0; i < yy - def_eyy; i++)
                 {
-                    if (calendar.IsLeapYear(def_eyy + k))
+                    if (calendar.IsLeapYear(def_eyy + i))
                     {
-                        for (int l = 0; l < 12; l++)
+                        for (j = 0; j < 12; j++)
                         {
-                            total_eDays += lmonth[l];
+                            total_eDays += lmonth[j];
                         }
                     }
                     else
                     {
-                        for (int l = 0; l < 12; l++)
+                        for (j = 0; j < 12; j++)
                         {
-                            total_eDays += month[l];
+                            total_eDays += month[j];
                         }
                     }
                 }
 
                 // count total no. of days in terms of month
-                for (int k = 0; k < mm - 1; k++)
+                for (i = 0; i < mm - 1; i++)
                 {
                     if (calendar.IsLeapYear(yy))
                     {
-                        total_eDays += lmonth[k];
+                        total_eDays += lmonth[i];
                     }
                     else
                     {
-                        total_eDays += month[k];
+                        total_eDays += month[i];
                     }
                 }
 
                 // count total no. of days in terms of day
                 total_eDays += dd;
+                i = 0;
                 j = def_nmm;
                 total_nDays = def_ndd;
                 m = def_nmm;
@@ -74,7 +75,7 @@ namespace NepaliDateConverter
                     a = calendar.BSCalendar[i][j];
                     total_nDays++;
                     day++;
-                    if (total_nDays > day)
+                    if (total_nDays > a)
                     {
                         m++; // increment month
                         total_nDays = 1; // reset nepali day to 1
@@ -118,13 +119,103 @@ namespace NepaliDateConverter
             }
             else
             {
-                return null;
+                return calendar;
             }
         }
 
-        public Calendar ConvertToEnglish(int year, int month, int day)
+        public Calendar ConvertToEnglish(int yy, int mm, int dd)
         {
-            throw new NotImplementedException();
+            Calendar calendar = new Calendar();
+
+            // Initial / Default values
+            int def_eyy = 1943;
+            int def_emm = 4;
+            int def_edd = 14 - 1;
+
+            // equivalent nepali date
+            int def_nyy = 2000;
+
+            int total_eDays = 0;
+            int total_nDays = 0;
+            int a = 0;
+            int day = 4 - 1;
+            int m = 0;
+            int y = 0;
+            int i = 0;
+            int j = 0;
+            int k = 0;
+
+            int[] month = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+            int[] lmonth = { 0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+            if (calendar.ValidNepaliDate(yy, mm, dd))
+            {
+                // count total days in terms of year
+                for (i = 0; i < yy - def_nyy; i++)
+                {
+                    for (j = 1; j <= 12; j++)
+                    {
+                        total_nDays += calendar.BSCalendar[k][j];
+                    }
+                    k++;
+                }
+
+                // count total days in terms of month
+                for (j = 1; j < mm; j++)
+                {
+                    total_nDays += calendar.BSCalendar[k][j];
+                }
+
+                // count total days in terms of day
+                total_nDays += dd;
+
+                // calculation of equivalent english date
+                total_eDays = def_edd;
+                m = def_emm;
+                y = def_eyy;
+
+                while (total_nDays != 0)
+                {
+                    if (calendar.IsLeapYear(y))
+                        a = lmonth[m];
+                    else
+                        a = month[m];
+
+                    total_eDays++;
+                    day++;
+
+                    if (total_eDays > a)
+                    {
+                        m++;
+                        total_eDays = 1;
+
+                        if (m > 12)
+                        {
+                            y++;
+                            m = 1;
+                        }
+                    }
+
+                    if (day > 7)
+                        day = 1;
+
+                    total_nDays--;
+                }
+
+                // public attribute accessors
+                calendar.Year = y;
+                calendar.Month = m;
+                calendar.Day = total_eDays;
+                calendar.WeekDay = day;
+                calendar.WeekDayName = calendar.GetDayOfWeek(day);
+                calendar.MonthName = calendar.GetEnglishMonth(m);
+
+                return calendar;
+            }
+            else
+            {
+                return calendar;
+            }
         }
     }
 }

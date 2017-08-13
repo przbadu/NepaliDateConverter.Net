@@ -28,7 +28,7 @@ namespace NepaliDateConverter.Tests
         {
             calendar = converter.ConvertToEnglish(2073, 1, 1);
             Assert.AreEqual(2016, calendar.Year);
-            Assert.AreEqual(4, calendar.Month);
+            Assert.AreEqual(4, calendar.Month, null, "Month doesn't matched");
             Assert.AreEqual(13, calendar.Day);
             Assert.AreEqual("Wednesday", calendar.WeekDayName);
             Assert.AreEqual("April", calendar.MonthName);
@@ -62,7 +62,7 @@ namespace NepaliDateConverter.Tests
         [Test]
         public void ConvertToNepaliShouldReturn2073_1_2()
         {
-            calendar = converter.ConvertToNepali(2016, 4, 13);
+            calendar = converter.ConvertToNepali(2016, 4, 14);
             Assert.AreEqual(2073, calendar.Year);
             Assert.AreEqual(1, calendar.Month);
             Assert.AreEqual(2, calendar.Day);
