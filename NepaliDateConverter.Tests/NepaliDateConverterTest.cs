@@ -192,5 +192,29 @@ namespace NepaliDateConverter.Tests
             Assert.AreEqual("Baishakh", calendar.MonthName);
             Assert.AreEqual(6, calendar.WeekDay);
         }
+
+        [Test]
+        public void ConvertToEnglishShouldReturn2017_4_28()
+        {
+            calendar = converter.ConvertToEnglish(2074, 1, 15);
+            Assert.AreEqual(2017, calendar.Year);
+            Assert.AreEqual(4, calendar.Month);
+            Assert.AreEqual(28, calendar.Day);
+            Assert.AreEqual("Friday", calendar.WeekDayName);
+            Assert.AreEqual("April", calendar.MonthName);
+            Assert.AreEqual(6, calendar.WeekDay);
+        }
+
+        [Test]
+        public void ConvertToNepaliShouldReturn2074_1_15()
+        {
+            calendar = converter.ConvertToNepali(2017, 4, 28);
+            Assert.AreEqual(2074, calendar.Year);
+            Assert.AreEqual(1, calendar.Month);
+            Assert.AreEqual(15, calendar.Day);
+            Assert.AreEqual("Friday", calendar.WeekDayName);
+            Assert.AreEqual("Baishakh", calendar.MonthName);
+            Assert.AreEqual(6, calendar.WeekDay);
+        }
     }
 }
