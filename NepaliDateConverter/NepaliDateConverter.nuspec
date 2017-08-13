@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>NepaliDateConverter.przbadu</id>
+    <id>NepaliDateConverter.Net</id>
     <version>1.0.0</version>
-    <title>NepaliDateConverter</title>
+    <title>Nepali Date Converter</title>
     <authors>przbadu</authors>
     <owners>przbadu</owners>
     <licenseUrl>https://github.com/przbadu/NepaliDateConverterCS/blob/master/LICENSE.txt</licenseUrl>
