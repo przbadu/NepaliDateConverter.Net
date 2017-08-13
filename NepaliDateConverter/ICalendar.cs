@@ -1,6 +1,8 @@
-﻿using System;
-namespace NepaliDateConverter
+﻿namespace NepaliDateConverter
 {
+    /// <summary>
+    /// Interface
+    /// </summary>
     public interface ICalendar
     {
         /// <summary>

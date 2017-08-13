@@ -1,8 +1,24 @@
-﻿using System;
-namespace NepaliDateConverter
+﻿namespace NepaliDateConverter
 {
+    /// <summary>
+    /// NepaliDateConverter converter = new NepaliDateConverter();
+    /// </summary>
     public class NepaliDateConverter : INepaliDateConverter
     {
+        /// <summary>
+        /// Converts Given English Year, Month and Day into equivalent Nepali Date
+        /// </summary>
+        /// <param name="yy">2016</param>
+        /// <param name="mm">4</param>
+        /// <param name="dd">13</param>
+        /// <returns>
+        /// calendar.Year => 2073
+        /// calendar.Month => 1
+        /// calendar.Day => 1
+        /// calendar.WeekDayName => Wednesday
+        /// calendar.WeekDay => 4
+        /// calendar.MonthName => Baishakh
+        /// </returns>
         public Calendar ConvertToNepali(int yy, int mm, int dd)
         {
             Calendar calendar = new Calendar();
@@ -123,6 +139,20 @@ namespace NepaliDateConverter
             }
         }
 
+        /// <summary>
+        /// Returns English Date for given Nepali Year, Month and Day
+        /// </summary>
+        /// <param name="yy">2073</param>
+        /// <param name="mm">1</param>
+        /// <param name="dd">1</param>
+        /// <returns>
+        /// calendar.Year => 2016
+        /// calendar.Month => 4
+        /// calendar.Day => 13
+        /// calendar.WeekDayName => Wednesday
+        /// calendar.WeekDay => 4
+        /// calendar.MonthName => April
+        /// </returns>
         public Calendar ConvertToEnglish(int yy, int mm, int dd)
         {
             Calendar calendar = new Calendar();

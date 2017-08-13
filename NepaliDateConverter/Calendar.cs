@@ -1,23 +1,56 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace NepaliDateConverter
 {
+    /// <summary>
+    /// Calendar calendar = new Calendar();
+    /// </summary>
     public class Calendar : ICalendar
     {
         private IDictionary<int, string> WeekNames;
         private IDictionary<int, string> EnglishMonthNames;
         private IDictionary<int, string> NepaliMonthNames;
+
+        /// <summary>
+        /// List of BS calendar months in each year
+        /// </summary>
         public IDictionary<int, int[]> BSCalendar;
 
+        /// <summary>
+        /// Year property
+        /// </summary>
         public int Year { get; set; }
+
+        /// <summary>
+        /// Month property
+        /// </summary>
         public int Month { get; set; }
+
+        /// <summary>
+        /// Day property
+        /// </summary>
         public int Day { get; set; }
+
+        /// <summary>
+        /// WeekDayName property
+        /// </summary>
         public string WeekDayName { get; set; }
+
+        /// <summary>
+        /// MonthName property
+        /// </summary>
         public string MonthName { get; set; }
+
+        /// <summary>
+        /// WeekDay property
+        /// </summary>
         public int WeekDay { get; set; }
 
+        /// <summary>
+        /// Calendar calendar = new Calendar();
+        /// </summary>
         public Calendar()
         {
             SetWeekNames();
@@ -26,6 +59,11 @@ namespace NepaliDateConverter
             SetBSCalendar();
         }
 
+        /// <summary>
+        /// Will return Day of week for given day index
+        /// </summary>
+        /// <param name="day">1</param>
+        /// <returns>Sunday</returns>
         public string GetDayOfWeek(int day)
         {
             if (day < 1 || day > 7)
@@ -33,6 +71,11 @@ namespace NepaliDateConverter
             return WeekNames[day];
         }
 
+        /// <summary>
+        /// Will return English month name for given month index
+        /// </summary>
+        /// <param name="month">2</param>
+        /// <returns>February</returns>
         public string GetEnglishMonth(int month)
         {
             if (month < 1 || month > 12)
@@ -40,6 +83,11 @@ namespace NepaliDateConverter
             return EnglishMonthNames[month];
         }
 
+        /// <summary>
+        /// Will return Nepali month name for given month index
+        /// </summary>
+        /// <param name="month">12</param>
+        /// <returns>Chaitra</returns>
         public string GetNepaliMonth(int month)
         {
             if (month < 1 || month > 12)
@@ -47,11 +95,24 @@ namespace NepaliDateConverter
             return NepaliMonthNames[month];
         }
 
+        /// <summary>
+        /// Check if given year is Leap Year or not
+        /// </summary>
+        /// <param name="year">2016</param>
+        /// <returns>True</returns>
         public bool IsLeapYear(int year)
         {
             return DateTime.IsLeapYear(year);
         }
 
+        /// <summary>
+        /// Check if given date is in valid English Date range or not.
+        /// Only supports Date range between 1944 To 2033
+        /// </summary>
+        /// <param name="year">2017</param>
+        /// <param name="month">5</param>
+        /// <param name="day">8</param>
+        /// <returns>True</returns>
         public bool ValidEnglishDate(int year, int month, int day)
         {
             if (year < 1944 || year > 2033)
@@ -75,6 +136,14 @@ namespace NepaliDateConverter
             return true;
         }
 
+        /// <summary>
+        /// Check if Given date is in Valid Nepali date range or not.
+        /// Only supports Date range Between 2000 To 2089
+        /// </summary>
+        /// <param name="year">2073</param>
+        /// <param name="month">1</param>
+        /// <param name="day">1</param>
+        /// <returns>True</returns>
         public bool ValidNepaliDate(int year, int month, int day)
         {
             if (year < 2000 || year > 2089)

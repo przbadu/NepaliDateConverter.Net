@@ -1,12 +1,14 @@
-﻿using System;
-namespace NepaliDateConverter
+﻿namespace NepaliDateConverter
 {
+    /// <summary>
+    /// Interface
+    /// </summary>
     public interface INepaliDateConverter
     {
         /// <summary>
         /// Will convert given English Date to Nepali Date
         /// </summary>
-        /// <returns>The to nepali.</returns>
+        /// <returns>Nepali Date</returns>
         /// <param name="yy">2017</param>
         /// <param name="mm">12</param>
         /// <param name="dd">3</param>
@@ -15,7 +17,7 @@ namespace NepaliDateConverter
         /// <summary>
         /// Will convert given Nepali Date to English Date
         /// </summary>
-        /// <returns>The to english.</returns>
+        /// <returns>English Date</returns>
         /// <param name="yy">2074</param>
         /// <param name="mm">12</param>
         /// <param name="dd">1</param>

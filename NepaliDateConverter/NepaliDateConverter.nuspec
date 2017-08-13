@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>NepaliDateConverter.przbadu</id>
+    <version>1.0.0</version>
+    <title>NepaliDateConverter</title>
+    <authors>przbadu</authors>
+    <owners>przbadu</owners>
+    <licenseUrl>https://github.com/przbadu/NepaliDateConverterCS/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/przbadu/NepaliDateConverterCS</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>C# Class library to convert English date into Nepali and Vice Versa.</description>
+    <releaseNotes>V1.0.0 released</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>nepali date converter class-library nuget packages</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\NepaliDateConverter.dll" target="lib\netstandard1.4\NepaliDateConverter.dll" />
+    <file src="bin\Release\NepaliDateConverter.xml" target="lib\netstandard1.4\NepaliDateConverter.xml" />
+  </files>
+</package>
