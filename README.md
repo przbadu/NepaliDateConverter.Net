@@ -4,6 +4,8 @@
 
 C# Class library for nepali date converter, with NUnit testing framework
 
+[Ruby Gem](https://github.com/przbadu/nepali_date_converter)
+
 ## Installation
 
 Download TODO: [DLL]() file and add reference to your project.
