@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("NepaliDateConverter")]
+[assembly: AssemblyTitle("NepaliDateConverter.Net.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NepaliDateConverter")]
+[assembly: AssemblyProduct("NepaliDateConverter.Net.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("45da58d5-fc57-4829-99b9-8a760da6dc66")]
+[assembly: Guid("b2e3f8ab-93b3-485f-aad8-6c7d7d3c5549")]
 
 // Version information for an assembly consists of the following four values:
 //

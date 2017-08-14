@@ -1,20 +1,17 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Diagnostics;
-using System.Collections.Generic;
 
-namespace NepaliDateConverter.Tests
+namespace NepaliDateConverter.Net.Tests
 {
     [TestFixture()]
-    public class NepaliDateConverterTest
+    class DateConverterTest
     {
-        NepaliDateConverter converter;
+        DateConverter converter;
         Calendar calendar;
 
         [SetUp]
         public void Init()
         {
-            converter = new NepaliDateConverter();
+            converter = new DateConverter();
         }
 
         [TearDown]

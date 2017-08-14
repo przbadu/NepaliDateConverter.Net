@@ -1,9 +1,9 @@
-﻿namespace NepaliDateConverter
+﻿namespace NepaliDateConverter.Net
 {
     /// <summary>
-    /// Interface
+    /// Summary
     /// </summary>
-    public interface INepaliDateConverter
+    interface IDateConverter
     {
         /// <summary>
         /// Will convert given English Date to Nepali Date

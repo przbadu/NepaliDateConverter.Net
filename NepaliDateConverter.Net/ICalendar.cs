@@ -1,4 +1,4 @@
-﻿namespace NepaliDateConverter
+﻿namespace NepaliDateConverter.Net
 {
     /// <summary>
     /// Interface

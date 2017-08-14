@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
-using System;
-namespace NepaliDateConverter.Tests
+namespace NepaliDateConverter.Net.Tests
 {
     [TestFixture()]
     public class CalendarTest

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace NepaliDateConverter
+
+namespace NepaliDateConverter.Net
 {
     /// <summary>
     /// Calendar calendar = new Calendar();

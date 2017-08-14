@@ -1,9 +1,11 @@
-﻿namespace NepaliDateConverter
+﻿namespace NepaliDateConverter.Net
 {
     /// <summary>
-    /// NepaliDateConverter converter = new NepaliDateConverter();
+    /// DateConverter class
+    /// 
+    /// DateConverter converter = new DateConverter();
     /// </summary>
-    public class NepaliDateConverter : INepaliDateConverter
+    public class DateConverter : IDateConverter
     {
         /// <summary>
         /// Converts Given English Year, Month and Day into equivalent Nepali Date

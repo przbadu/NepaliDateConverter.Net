@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NepaliDateConverter", "NepaliDateConverter\NepaliDateConverter.csproj", "{45DA58D5-FC57-4829-99B9-8A760DA6DC66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NepaliDateConverter.Net", "NepaliDateConverter.Net\NepaliDateConverter.Net.csproj", "{128DE0BD-1126-47C7-8D06-BA4AB5DE95E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NepaliDateConverter.Tests", "NepaliDateConverter.Tests\NepaliDateConverter.Tests.csproj", "{47CD31A7-86F8-4CA2-81F8-8999F285C123}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NepaliDateConverter.Net.Tests", "NepaliDateConverter.Net.Tests\NepaliDateConverter.Net.Tests.csproj", "{B2E3F8AB-93B3-485F-AAD8-6C7D7D3C5549}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{45DA58D5-FC57-4829-99B9-8A760DA6DC66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{45DA58D5-FC57-4829-99B9-8A760DA6DC66}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{45DA58D5-FC57-4829-99B9-8A760DA6DC66}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{45DA58D5-FC57-4829-99B9-8A760DA6DC66}.Release|Any CPU.Build.0 = Release|Any CPU
-		{47CD31A7-86F8-4CA2-81F8-8999F285C123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{47CD31A7-86F8-4CA2-81F8-8999F285C123}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{47CD31A7-86F8-4CA2-81F8-8999F285C123}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{47CD31A7-86F8-4CA2-81F8-8999F285C123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{128DE0BD-1126-47C7-8D06-BA4AB5DE95E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{128DE0BD-1126-47C7-8D06-BA4AB5DE95E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{128DE0BD-1126-47C7-8D06-BA4AB5DE95E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{128DE0BD-1126-47C7-8D06-BA4AB5DE95E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2E3F8AB-93B3-485F-AAD8-6C7D7D3C5549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2E3F8AB-93B3-485F-AAD8-6C7D7D3C5549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2E3F8AB-93B3-485F-AAD8-6C7D7D3C5549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2E3F8AB-93B3-485F-AAD8-6C7D7D3C5549}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
