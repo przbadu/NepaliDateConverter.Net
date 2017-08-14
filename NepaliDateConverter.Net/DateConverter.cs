@@ -8,22 +8,54 @@
     public class DateConverter : IDateConverter
     {
         /// <summary>
+        /// Year property
+        /// </summary>
+        public int Year { get; private set; }
+
+        /// <summary>
+        /// Month property
+        /// </summary>
+        public int Month { get; private set; }
+
+        /// <summary>
+        /// Day property
+        /// </summary>
+        public int Day { get; private set; }
+
+        /// <summary>
+        /// WeekDayName property
+        /// </summary>
+        public string WeekDayName { get; private set; }
+
+        /// <summary>
+        /// MonthName property
+        /// </summary>
+        public string MonthName { get; private set; }
+
+        /// <summary>
+        /// WeekDay property
+        /// </summary>
+        public int WeekDay { get; private set; }
+
+        /// <summary>
         /// Converts Given English Year, Month and Day into equivalent Nepali Date
         /// </summary>
         /// <param name="yy">2016</param>
         /// <param name="mm">4</param>
         /// <param name="dd">13</param>
         /// <returns>
-        /// calendar.Year => 2073
-        /// calendar.Month => 1
-        /// calendar.Day => 1
-        /// calendar.WeekDayName => Wednesday
-        /// calendar.WeekDay => 4
-        /// calendar.MonthName => Baishakh
+        /// converter.Year => 2073
+        /// converter.Month => 1
+        /// converter.Day => 1
+        /// converter.WeekDayName => Wednesday
+        /// converter.WeekDay => 4
+        /// converter.MonthName => Baishakh
         /// </returns>
-        public Calendar ConvertToNepali(int yy, int mm, int dd)
+
+        public static DateConverter ConvertToNepali(int yy, int mm, int dd)
         {
             Calendar calendar = new Calendar();
+            DateConverter converter = new DateConverter();
 
             if (calendar.ValidEnglishDate(yy, mm, dd))
             {
@@ -126,18 +158,18 @@
                 numDay = day;
 
                 // public attribute accessors
-                calendar.Year = y;
-                calendar.Month = m;
-                calendar.Day = total_nDays;
-                calendar.WeekDay = day;
-                calendar.WeekDayName = calendar.GetDayOfWeek(day);
-                calendar.MonthName = calendar.GetNepaliMonth(m);
+                converter.Year = y;
+                converter.Month = m;
+                converter.Day = total_nDays;
+                converter.WeekDay = day;
+                converter.WeekDayName = calendar.GetDayOfWeek(day);
+                converter.MonthName = calendar.GetNepaliMonth(m);
 
-                return calendar;
+                return converter;
             }
             else
             {
-                return calendar;
+                return converter;
             }
         }
 
@@ -148,16 +180,17 @@
         /// <param name="mm">1</param>
         /// <param name="dd">1</param>
         /// <returns>
-        /// calendar.Year => 2016
-        /// calendar.Month => 4
-        /// calendar.Day => 13
-        /// calendar.WeekDayName => Wednesday
-        /// calendar.WeekDay => 4
-        /// calendar.MonthName => April
+        /// converter.Year => 2016
+        /// converter.Month => 4
+        /// converter.Day => 13
+        /// converter.WeekDayName => Wednesday
+        /// converter.WeekDay => 4
+        /// converter.MonthName => April
         /// </returns>
-        public Calendar ConvertToEnglish(int yy, int mm, int dd)
+        public static DateConverter ConvertToEnglish(int yy, int mm, int dd)
         {
             Calendar calendar = new Calendar();
+            DateConverter converter = new DateConverter();
 
             // Initial / Default values
             int def_eyy = 1943;
@@ -235,18 +268,19 @@
                 }
 
                 // public attribute accessors
-                calendar.Year = y;
-                calendar.Month = m;
-                calendar.Day = total_eDays;
-                calendar.WeekDay = day;
-                calendar.WeekDayName = calendar.GetDayOfWeek(day);
-                calendar.MonthName = calendar.GetEnglishMonth(m);
+                // public attribute accessors
+                converter.Year = y;
+                converter.Month = m;
+                converter.Day = total_eDays;
+                converter.WeekDay = day;
+                converter.WeekDayName = calendar.GetDayOfWeek(day);
+                converter.MonthName = calendar.GetEnglishMonth(m);
 
-                return calendar;
+                return converter;
             }
             else
             {
-                return calendar;
+                return converter;
             }
         }
     }

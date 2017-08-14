@@ -20,36 +20,6 @@ namespace NepaliDateConverter.Net
         public IDictionary<int, int[]> BSCalendar;
 
         /// <summary>
-        /// Year property
-        /// </summary>
-        public int Year { get; set; }
-
-        /// <summary>
-        /// Month property
-        /// </summary>
-        public int Month { get; set; }
-
-        /// <summary>
-        /// Day property
-        /// </summary>
-        public int Day { get; set; }
-
-        /// <summary>
-        /// WeekDayName property
-        /// </summary>
-        public string WeekDayName { get; set; }
-
-        /// <summary>
-        /// MonthName property
-        /// </summary>
-        public string MonthName { get; set; }
-
-        /// <summary>
-        /// WeekDay property
-        /// </summary>
-        public int WeekDay { get; set; }
-
-        /// <summary>
         /// Calendar calendar = new Calendar();
         /// </summary>
         public Calendar()
