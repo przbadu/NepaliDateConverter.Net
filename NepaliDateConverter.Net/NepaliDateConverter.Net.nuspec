@@ -15,7 +15,6 @@
     <tags>nepali date converter class-library nuget packages</tags>
   </metadata>
   <files>
-    <file src="bin\Release\NepaliDateConverter.Net.dll" target="lib\netstandard1.4\NepaliDateConverter.Net.dll" />
-    <file src="bin\Release\NepaliDateConverter.Net.xml" target="lib\netstandard1.4\NepaliDateConverter.Net.xml" />
+    <file src="lib\**" target="lib" />
   </files>
 </package>

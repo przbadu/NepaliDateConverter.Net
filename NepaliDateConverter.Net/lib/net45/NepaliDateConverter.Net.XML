@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NepaliDateConverter.Net</name>
+    </assembly>
+    <members>
+        <member name="T:NepaliDateConverter.Net.Calendar">
+            <summary>
+            Calendar calendar = new Calendar();
+            </summary>
+        </member>
+        <member name="F:NepaliDateConverter.Net.Calendar.BSCalendar">
+            <summary>
+            List of BS calendar months in each year
+            </summary>
+        </member>
+        <member name="M:NepaliDateConverter.Net.Calendar.#ctor">
+            <summary>
+            Calendar calendar = new Calendar();
+            </summary>
+        </member>
+        <member name="M:NepaliDateConverter.Net.Calendar.GetDayOfWeek(System.Int32)">
+            <summary>
+            Will return Day of week for given day index
+            </summary>
+            <param name="day">1</param>
+            <returns>Sunday</returns>
+        </member>
+        <member name="M:NepaliDateConverter.Net.Calendar.GetEnglishMonth(System.Int32)">
+            <summary>
+            Will return English month name for given month index
+            </summary>
+            <param name="month">2</param>
+            <returns>February</returns>
+        </member>
+        <member name="M:NepaliDateConverter.Net.Calendar.GetNepaliMonth(System.Int32)">
+            <summary>
+            Will return Nepali month name for given month index
+            </summary>
+            <param name="month">12</param>
+            <returns>Chaitra</returns>
+        </member>
+        <member name="M:NepaliDateConverter.Net.Calendar.IsLeapYear(System.Int32)">
+            <summary>
+            Check if given year is Leap Year or not
+            </summary>
+            <param name="year">2016</param>
+            <returns>True</returns>
+        </member>
+        <member name="M:NepaliDateConverter.Net.Calendar.ValidEnglishDate(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Check if given date is in valid English Date range or not.
+            Only supports Date range between 1944 To 2033
+            </summary>
+            <param name="year">2017</param>
+            <param name="month">5</param>
+            <param name="day">8</param>
+            <returns>True</returns>
+        </member>
+        <member name="M:NepaliDateConverter.Net.Calendar.ValidNepaliDate(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Check if Given date is in Valid Nepali date range or not.
+            Only supports Date range Between 2000 To 2089
+            </summary>
+            <param name="year">2073</param>
+            <param name="month">1</param>
+            <param name="day">1</param>
+            <returns>True</returns>
+        </member>
+        <member name="T:NepaliDateConverter.Net.DateConverter">
+            <summary>
+            DateConverter class
+            
+            DateConverter converter = new DateConverter();
+            </summary>
+        </member>
+        <member name="P:NepaliDateConverter.Net.DateConverter.Year">
+            <summary>
+            Year property
+            </summary>
+        </member>
+        <member name="P:NepaliDateConverter.Net.DateConverter.Month">
+            <summary>
+            Month property
+            </summary>
+        </member>
+        <member name="P:NepaliDateConverter.Net.DateConverter.Day">
+            <summary>
+            Day property
+            </summary>
+        </member>
+        <member name="P:NepaliDateConverter.Net.DateConverter.WeekDayName">
+            <summary>
+            WeekDayName property
+            </summary>
+        </member>
+        <member name="P:NepaliDateConverter.Net.DateConverter.MonthName">
+            <summary>
+            MonthName property
+            </summary>
+        </member>
+        <member name="P:NepaliDateConverter.Net.DateConverter.WeekDay">
+            <summary>
+            WeekDay property
+            </summary>
+        </member>
+        <member name="M:NepaliDateConverter.Net.DateConverter.ConvertToNepali(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Converts Given English Year, Month and Day into equivalent Nepali Date
+            </summary>
+            <param name="yy">2016</param>
+            <param name="mm">4</param>
+            <param name="dd">13</param>
+            <returns>
+            converter.Year => 2073
+            converter.Month => 1
+            converter.Day => 1
+            converter.WeekDayName => Wednesday
+            converter.WeekDay => 4
+            converter.MonthName => Baishakh
+            </returns>
+        </member>
+        <member name="M:NepaliDateConverter.Net.DateConverter.ConvertToEnglish(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Returns English Date for given Nepali Year, Month and Day
+            </summary>
+            <param name="yy">2073</param>
+            <param name="mm">1</param>
+            <param name="dd">1</param>
+            <returns>
+            converter.Year => 2016
+            converter.Month => 4
+            converter.Day => 13
+            converter.WeekDayName => Wednesday
+            converter.WeekDay => 4
+            converter.MonthName => April
+            </returns>
+        </member>
+        <member name="T:NepaliDateConverter.Net.ICalendar">
+            <summary>
+            Interface
+            </summary>
+        </member>
+        <member name="M:NepaliDateConverter.Net.ICalendar.GetDayOfWeek(System.Int32)">
+            <summary>
+            Returns week days; Sunday, Monday, ... , Saturday. 
+            It expects index range from 1 through 7
+            </summary>
+            <param name="day">1</param>
+        </member>
+        <member name="M:NepaliDateConverter.Net.ICalendar.GetEnglishMonth(System.Int32)">
+            <summary>
+            This function returns English Months like January, February,..,December.
+            It expects index range from 1 through 12
+            </summary>
+            <param name="month">1</param>
+        </member>
+        <member name="M:NepaliDateConverter.Net.ICalendar.GetNepaliMonth(System.Int32)">
+            <summary>
+            This function returns Nepali Months like Baishakh, Jesth,..,Chaitra.
+            It expects index range from 1 through 12
+            </summary>
+            <param name="month">12</param>
+        </member>
+        <member name="M:NepaliDateConverter.Net.ICalendar.ValidEnglishDate(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Will check if given year, month and day are in valid english date range
+            and return either true/false.
+            Valid Date ranges are 1994 through 2033
+            </summary>
+            <returns><c>true</c>, if english date was valided, <c>false</c> otherwise.</returns>
+            <param name="year">2017</param>
+            <param name="month">01</param>
+            <param name="day">20</param>
+        </member>
+        <member name="M:NepaliDateConverter.Net.ICalendar.ValidNepaliDate(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Will check if given year, month and day are in valid nepali date range
+            and returns either true/false.
+            Valid Date ranges are 2000 through 2089
+            </summary>
+            <returns><c>true</c>, if nepali date was valided, <c>false</c> otherwise.</returns>
+            <param name="year">2074</param>
+            <param name="month">12</param>
+            <param name="day">01</param>
+        </member>
+        <member name="M:NepaliDateConverter.Net.ICalendar.IsLeapYear(System.Int32)">
+            <summary>
+            Check if given year is leap year or not and returns either true/false.
+            </summary>
+            <returns><c>true</c>, if leap year was ised, <c>false</c> otherwise.</returns>
+            <param name="year">2016</param>
+        </member>
+        <member name="T:NepaliDateConverter.Net.IDateConverter">
+            <summary>
+            Summary
+            </summary>
+        </member>
+        <member name="P:NepaliDateConverter.Net.IDateConverter.Year">
+            <summary>
+            Getter and Setter for Year
+            </summary>
+            <value>2017</value>
+        </member>
+        <member name="P:NepaliDateConverter.Net.IDateConverter.Month">
+            <summary>
+            Getter and setter for Month
+            </summary>
+            <value>11</value>
+        </member>
+        <member name="P:NepaliDateConverter.Net.IDateConverter.Day">
+            <summary>
+            Getter and setter for Day
+            </summary>
+            <value>32</value>
+        </member>
+        <member name="P:NepaliDateConverter.Net.IDateConverter.WeekDayName">
+            <summary>
+            Getter and setter for week day name
+            </summary>
+            <value>Sunday</value>
+        </member>
+        <member name="P:NepaliDateConverter.Net.IDateConverter.MonthName">
+            <summary>
+            Getter and setter for Month name
+            </summary>
+            <value>January/Baishakh</value>
+        </member>
+        <member name="P:NepaliDateConverter.Net.IDateConverter.WeekDay">
+            <summary>
+            Getter and setter for Week Day
+            </summary>
+            <value>1</value>
+        </member>
+    </members>
+</doc>
