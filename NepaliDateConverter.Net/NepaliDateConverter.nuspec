@@ -2,20 +2,20 @@
 <package >
   <metadata>
     <id>NepaliDateConverter.Net</id>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
     <title>Nepali Date Converter</title>
     <authors>przbadu</authors>
     <owners>przbadu</owners>
-    <licenseUrl>https://github.com/przbadu/NepaliDateConverterCS/blob/master/LICENSE.txt</licenseUrl>
-    <projectUrl>https://github.com/przbadu/NepaliDateConverterCS</projectUrl>
+    <licenseUrl>https://github.com/przbadu/NepaliDateConverter.Net/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/przbadu/NepaliDateConverter.Net</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>C# Class library to convert English date into Nepali and Vice Versa.</description>
-    <releaseNotes>V1.0.0 released</releaseNotes>
+    <releaseNotes>V2.0.0 released</releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>nepali date converter class-library nuget packages</tags>
   </metadata>
   <files>
-    <file src="bin\Release\NepaliDateConverter.dll" target="lib\netstandard1.4\NepaliDateConverter.dll" />
-    <file src="bin\Release\NepaliDateConverter.xml" target="lib\netstandard1.4\NepaliDateConverter.xml" />
+    <file src="bin\Release\NepaliDateConverter.Net.dll" target="lib\netstandard1.4\NepaliDateConverter.Net.dll" />
+    <file src="bin\Release\NepaliDateConverter.Net.xml" target="lib\netstandard1.4\NepaliDateConverter.Net.xml" />
   </files>
 </package>
