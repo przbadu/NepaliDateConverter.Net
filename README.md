@@ -1,6 +1,7 @@
-[![Build Status](https://travis-ci.org/przbadu/NepaliDateConverterCS.svg?branch=master)](https://travis-ci.org/przbadu/NepaliDateConverterCS.svg?branch=master)
+[![Build Status](https://travis-ci.org/przbadu/NepaliDateConverter.Net.svg?branch=master)](https://travis-ci.org/przbadu/NepaliDateConverter.Net.svg?branch=master)
 [![NuGet](https://img.shields.io/nuget/v/NepaliDateConverter.Net.svg)](https://www.nuget.org/packages/NepaliDateconverter.Net)
-# NepaliDateConverterCS
+
+# NepaliDateConverter.Net
 
 C# Class library for nepali date converter, with NUnit testing framework
 
@@ -8,11 +9,13 @@ C# Class library for nepali date converter, with NUnit testing framework
 
 ### Option 1
 
-Download [Latest Release](https://github.com/przbadu/NepaliDateConverterCS/releases) extract zip file and include `NepaliDateConverter.dll` file to your project reference.
+Download [Latest Release](https://github.com/przbadu/NepaliDateConverter.Net/releases) extract zip file and include `NepaliDateConverter.dll` file to your project reference.
 
 ### Option 2
 
 You can install [https://www.nuget.org/packages/NepaliDateConverter.Net](https://www.nuget.org/packages/NepaliDateConverter.Net)package using Nuget package manger.
+
+> Please use version `>= 2.x`
 
 ```sh
 Install-Package NepaliDateConverter.Net
@@ -23,27 +26,25 @@ Install-Package NepaliDateConverter.Net
 Convert English Date to Nepali Date
 
 ```cs
-NepaliDateConverter converter = new NepaliDateConverter();
-calendar = converter.ConvertToNepali(2017, 1, 6);
-calendar.Year // => 2073
-calendar.Month // => 9
-calendar.Day // => 22
-calendar.WeekDayName // => Friday
-calendar.MonthName // => Poush
-calendar.WeekDay // => 6
+DateConverter converter = DateConverter.ConvertToNepali(2017, 1, 6);
+converter.Year // => 2073
+converter.Month // => 9
+converter.Day // => 22
+converter.WeekDayName // => Friday
+converter.MonthName // => Poush
+converter.WeekDay // => 6
 ```
 
 convert B.S to A.D
 
 ```cs
-NepaliDateConverter converter = new NepaliDateConverter();
-calendar = converter.ConvertToEnglish(2073, 9, 22);
-calendar.Year // => 2017
-calendar.Month // => 1
-calendar.Day //=> 6
-calendar.WeekDayName // => Friday
-calendar.MonthName // => January
-calendar.WeekDay // => 6
+DateConverter converter = DateConverter.ConvertToEnglish(2073, 9, 22);
+converter.Year // => 2017
+converter.Month // => 1
+converter.Day //=> 6
+converter.WeekDayName // => Friday
+converter.MonthName // => January
+converter.WeekDay // => 6
 ```
 
 ## TODO
@@ -65,12 +66,12 @@ Till now, we can only convert date from 2000 to 2033 B.S (nepali date).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/NepaliDateConverterCS. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/NepaliDateConverter.Net. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 # References
 
 * [Ruby Gem](https://github.com/przbadu/nepali_date_converter)
-* [C# Class Library](https://github.com/przbadu/NepaliDateConverterCS)
+* [C# Class Library](https://github.com/przbadu/NepaliDateConverter.Net)
 
 
 ## License
