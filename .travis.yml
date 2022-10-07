@@ -1,8 +1,11 @@
+dist: xenial
+sudo: required
 language: csharp
+mono: none
+dotnet: 2.1.202
 solution: NepaliDateConverter.sln
-before_install:
-  - sudo apt-get install nunit-console
-before_script:
-  - nuget restore NepaliDateConverter.sln
-after_script:
-  - nunit-console NepaliDateConverter.Tests/bin/Release/NepaliDateConverter.Tests.dll
+script:
+  - dotnet restore
+  - dotnet build
+  - cd NepaliDateConverter.Net.Tests
+  - dotnet test 
