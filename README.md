@@ -1,7 +1,9 @@
 [![Build Status](https://travis-ci.org/przbadu/NepaliDateConverter.Net.svg?branch=master)](https://travis-ci.org/przbadu/NepaliDateConverter.Net.svg?branch=master)
 [![NuGet](https://img.shields.io/nuget/v/NepaliDateConverter.Net.svg)](https://www.nuget.org/packages/NepaliDateconverter.Net)
 
-# Unmaintained!!!
+# Not maintained anymore!!!
+
+Please Fork your own repo and make changes there. Thank you.
 
 # NepaliDateConverter.Net
 
